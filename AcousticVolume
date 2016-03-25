@@ -50,5 +50,28 @@ constraints.ipadx = 90;
 constraints.gridy = 0; 
 layout.setConstraints(DiamLabel, constraints); 
 constraints.gridy = 1; 
+layout.setConstraints(dobrLabel, constraints);
+constraints.gridy = 2;
+constraints.gridx = 1;
+constraints.anchor = GridBagConstraints.EAST;
+constraints.ipadx = 50;
+constraints.gridy = 0;
+layout.setConstraints(DiamField, constraints);
+constraints.gridy = 1;
+layout.setConstraints(dobrField, constraints);
+constraints.gridy = 2;
+constraints.gridx = 2;
+constraints.ipadx = 0;
+constraints.gridy = 0;
+layout.setConstraints(cmLabel, constraints);
+constraints.gridy = 1;
+layout.setConstraints(dLabel, constraints);
+constraints.gridy = 2;
+constraints.gridx = 0;
+constraints.gridy = 4;
+constraints.gridwidth = GridBagConstraints.REMAINDER;
+constraints.anchor = GridBagConstraints.EAST;
+layout.setConstraints(calcButton, constraints);
+
 
 
