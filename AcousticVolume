@@ -1,1 +1,23 @@
+package KodPack; 
+import java.awt.*; 
+import java.awt.event.*; 
+import javax.swing.*; 
+public class DinamikCalculator { 
+private JTextField DiamField; 
+private JLabel DiamLabel; 
+private JLabel cmLabel; 
+private JTextField dobrField; 
+private JLabel dobrLabel; 
+private JLabel dLabel;   
+private JButton calcButton; 
+private JLabel resultLabel; 
+private JFrame mainFrame; 
+DinamikCalculator() { 
+DiamLabel = new JLabel("Диаметр диффузора"); 
+DiamField = new JTextField("0"); 
+DiamField.setHorizontalAlignment(JTextField.RIGHT); 
+cmLabel = new JLabel("см"); 
+dobrLabel = new JLabel("Добротность динамика"); 
+dobrField = new JTextField("0"); 
+dobrField.setHorizontalAlignment(JTextField.RIGHT); 
 
