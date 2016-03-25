@@ -20,4 +20,35 @@ cmLabel = new JLabel("см");
 dobrLabel = new JLabel("Добротность динамика"); 
 dobrField = new JTextField("0"); 
 dobrField.setHorizontalAlignment(JTextField.RIGHT); 
+dobrField.setHorizontalAlignment(JTextField.RIGHT); 
+dLabel = new JLabel("Д");  
+calcButton = new JButton("Рассчитать"); 
+calcButton.addActionListener(new ActionListener() { 
+@Override 
+public void actionPerformed(ActionEvent ae) { 
+try { 
+double Diam = Double.parseDouble(DiamField.getText()); 
+double dobr = Double.parseDouble(dobrField.getText()); 
+double volume = 0.25 * Diam * Diam * dobr ; 
+resultLabel.setText("<html>Результат <font style='color: red; font-weight: bold;'>" + volume 
++ "</font> л.</html>"); 
+} 
+catch ( NumberFormatException nfe ) { 
+resultLabel.setText("Проверьте введённые данные"); 
+}
+}
+});
+resultLabel = new JLabel("Введите данные для рассчёта"); 
+GridBagLayout layout = new GridBagLayout(); 
+GridBagConstraints constraints = new GridBagConstraints(); 
+constraints.weightx = 1.0; 
+constraints.weighty = 1.0; 
+constraints.insets = new Insets(5, 5, 5, 5); 
+constraints.gridx = 0; 
+constraints.anchor = GridBagConstraints.WEST; 
+constraints.ipadx = 90; 
+constraints.gridy = 0; 
+layout.setConstraints(DiamLabel, constraints); 
+constraints.gridy = 1; 
+
 
